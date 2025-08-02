@@ -1,0 +1,150 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบจัดการสินค้า - Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(to right, #e8f5e9, #ffffff);
+      color: #2e7d32;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      padding: 20px;
+      border: 1px solid #c8e6c9;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 80px;
+    }
+
+    .logo p {
+      font-size: 14px;
+      color: #388e3c;
+      margin-top: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 22px;
+      color: #1b5e20;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      color: #2e7d32;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #a5d6a7;
+      padding-bottom: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #33691e;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #c5e1a5;
+      border-radius: 8px;
+      width: 100%;
+      background-color: #f1f8e9;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #66bb6a;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="file"] {
+      background-color: #fff;
+      border: none;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    /* 📱 Responsive Design */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      .logo img {
+        width: 60px;
+      }
+
+      .logo p {
+        font-size: 12px;
+      }
+
+      input, select, textarea {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>

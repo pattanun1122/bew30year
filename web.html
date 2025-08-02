@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สั่งซื้อของที่ระลึก</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(to right, #e8f5e9, #ffffff);
+      color: #2e7d32;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      color: #1b5e20;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      border: 1px solid #c8e6c9;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    .logo p {
+      font-size: 16px;
+      color: #388e3c;
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #2e7d32;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #a5d6a7;
+      padding-bottom: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #33691e;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #c5e1a5;
+      background-color: #f1f8e9;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #66bb6a;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    input[type="file"] {
+      background-color: #fff;
+      border: none;
+    }
+
+    input[type="submit"] {
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2e7d32;
+    }
+
+    /* 📱 Responsive Design */
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      input, select, textarea {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      input[type="submit"] {
+        font-size: 15px;
+        padding: 12px;
+      }
+
+      .logo img {
+        width: 80px;
+      }
+
+      .logo p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎁 ฟอร์มสั่งซื้อของที่ระลึก 30 ปี</h1>
+  <div class="container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/th/thumb/b/b7/MJU_LOGO.svg/800px-MJU_LOGO.svg.png" alt="MJU Logo">
+      <p>ของที่ระลึกครบรอบ 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์<br>มหาวิทยาลัยแม่โจ้</p>
+    </div>
+
+    <h2>👤 ลูกค้า</h2>
+    <form>
+      <label>ชื่อ - นามสกุล</label>
+      <input type="text" required placeholder="กรอกชื่อ-นามสกุล">
+
+      <label>ที่อยู่สำหรับจัดส่ง</label>
+      <textarea required placeholder="กรอกที่อยู่จัดส่ง"></textarea>
+
+      <label>เบอร์โทรศัพท์</label>
+      <input type="tel" required placeholder="กรอกเบอร์โทรศัพท์">
+
+      <label>เลือกรายการสินค้า</label>
+      <textarea required placeholder="ระบุชื่อสินค้า, สี, ขนาด, จำนวน"></textarea>
+
+      <label>แนบรูปสลิปการชำระเงิน</label>
+      <input type="file" required>
+
+      <label>วันที่ซื้อ</label>
+      <input type="date" required>
+
+      <label>วิธีรับสินค้า</label>
+      <select required>
+        <option value="">-- กรุณาเลือก --</option>
+        <option>จัดส่ง</option>
+        <option>รับเองที่มหาวิทยาลัย</option>
+      </select>
+
+      <label>ช่องทางชำระเงิน</label>
+      <select required>
+        <option value="">-- กรุณาเลือก --</option>
+        <option>โอนผ่านธนาคาร</option>
+        <option>พร้อมเพย์</option>
+        <option>เงินสด</option>
+      </select>
+
+      <input type="submit" value="📨 ส่งคำสั่งซื้อ">
+    </form>
+  </div>
+</body>
+</html>
