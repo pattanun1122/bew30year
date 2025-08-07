@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ระบบจัดการสินค้า - Admin</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ฟอร์มสั่งซื้อสินค้า</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
   <style>
     * {
@@ -34,6 +36,7 @@
 
     .logo img {
       width: 80px;
+      border-radius: 10px;
     }
 
     .logo p {
@@ -47,15 +50,6 @@
       font-size: 22px;
       color: #1b5e20;
       margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 18px;
-      color: #2e7d32;
-      margin-top: 25px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #a5d6a7;
-      padding-bottom: 5px;
     }
 
     form {
@@ -111,7 +105,6 @@
       background-color: #2e7d32;
     }
 
-    /* 📱 Responsive Design */
     @media (max-width: 600px) {
       body {
         padding: 10px;
@@ -123,10 +116,6 @@
 
       h1 {
         font-size: 20px;
-      }
-
-      h2 {
-        font-size: 16px;
       }
 
       .logo img {
@@ -148,3 +137,59 @@
     }
   </style>
 </head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCGi9--ei5T9wprQ92DNDGhOEl5d8MRY1kMA&s" alt="โลโก้ระบบ">
+      <p>ฟอร์มสั่งซื้อสินค้า</p>
+    </div>
+
+    <h1>ข้อมูลการสั่งซื้อของลูกค้า</h1>
+
+    <form>
+      <label for="fullname">ชื่อ-นามสกุล</label>
+      <input type="text" id="fullname" name="fullname" placeholder="กรอกชื่อ-นามสกุล" required>
+
+      <label for="address">ที่อยู่</label>
+      <textarea id="address" name="address" placeholder="กรอกที่อยู่ในการจัดส่ง" required></textarea>
+
+      <label for="phone">เบอร์โทรศัพท์</label>
+      <input type="tel" id="phone" name="phone" placeholder="กรอกเบอร์โทร" required>
+
+      <label for="product">เลือกรายการสินค้า</label>
+      <select id="product" name="product" required>
+        <option value="">-- เลือกสินค้า --</option>
+        <option value="ชุด A">ชุด A - 299 บาท</option>
+        <option value="ชุด B">ชุด B - 399 บาท</option>
+        <option value="ชุด C">ชุด C - 499 บาท</option>
+      </select>
+
+      <label for="details">รายละเอียดเพิ่มเติม</label>
+      <textarea id="details" name="details" placeholder="ระบุสี ขนาด หรือข้อมูลเพิ่มเติม..."></textarea>
+
+      <label for="slip">แนบสลิปการโอน</label>
+      <input type="file" id="slip" name="slip" accept="image/*" required>
+
+      <label for="date">วันที่สั่งซื้อ</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="delivery">วิธีรับสินค้า</label>
+      <select id="delivery" name="delivery" required>
+        <option value="">-- กรุณาเลือก --</option>
+        <option value="รับเอง">รับเอง</option>
+        <option value="จัดส่ง">จัดส่ง</option>
+      </select>
+
+      <label for="payment">ช่องทางชำระเงิน</label>
+      <select id="payment" name="payment" required>
+        <option value="">-- กรุณาเลือก --</option>
+        <option value="โอนผ่านธนาคาร">โอนผ่านธนาคาร</option>
+        <option value="พร้อมเพย์">พร้อมเพย์</option>
+        <option value="เก็บเงินปลายทาง">เก็บเงินปลายทาง</option>
+      </select>
+
+      <button type="submit">ส่งข้อมูลการสั่งซื้อ</button>
+    </form>
+  </div>
+</body>
+</html>
